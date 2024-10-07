@@ -145,13 +145,25 @@ body {
 
 /* Style untuk bagian Skill */
 .skill-images {
-  display: flex; /* Menampilkan gambar secara horizontal */
+  display: flex;
+  flex-wrap: wrap; /* Membuat gambar bisa turun ke baris berikutnya */
   gap: 10px; /* Jarak antar gambar */
   justify-content: center; /* Pusatkan gambar secara horizontal */
 }
 
 .skill-image {
-  width: auto; /* Gunakan lebar otomatis */
+  width: auto;
   height: 60px; /* Sesuaikan tinggi gambar agar tidak terlalu besar */
   object-fit: contain; /* Agar gambar tetap proporsional tanpa dipotong */
+  max-width: 20%; /* Membatasi lebar gambar agar 5 gambar bisa muat di satu baris */
+}
+
+/* Responsif untuk mobile */
+@media screen and (max-width: 600px) {
+  .skill-images {
+    justify-content: flex-start; /* Membuat gambar tetap rata kiri di mobile */
+  }
+  .skill-image {
+    max-width: 30%; /* Di mobile, tampilkan maksimal 3 gambar per baris */
+  }
 }
