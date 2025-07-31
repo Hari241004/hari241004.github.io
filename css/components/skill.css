@@ -1,0 +1,104 @@
+/**********************************/
+/********** Keahlian CSS **********/
+/**********************************/
+.skill {
+    position: relative;
+    padding: 60px 30px 30px 30px;
+    background: #ffffff;
+}
+
+.skill .skill-item {
+    position: relative;
+    height: 250px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.skill .skill-item figure {
+    background: #f8f9fa;
+    overflow: hidden;
+    height: 220px;
+    position: relative;
+    border-radius: 8px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.skill .skill-item figure:hover {
+    border-color: #FF6F61;
+}
+
+.skill .skill-item figure img {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+}
+
+.skill .skill-item figure:hover img {
+    opacity: 0.1;
+    transform: scale(0.9) translateY(-10px); 
+}
+
+.skill .skill-item figure .skill-title {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 20px 15px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    background: rgba(255, 111, 97, .85); 
+    transition: all 0.3s ease-in-out;
+}
+
+.skill .skill-item figure .skill-title span {
+    display: block;
+    margin-top: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.skill .skill-item figure:hover .skill-title {
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Penyesuaian Tombol Navigasi Slider Skill */
+.skill .slick-prev,
+.skill .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+}
+
+.skill .slick-prev {
+    left: -15px;
+}
+
+.skill .slick-next {
+    right: -15px;
+}
+
+.skill .slick-prev:hover,
+.skill .slick-next:hover {
+    background: rgba(0,0,0,0.5);
+}
